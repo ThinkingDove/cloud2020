@@ -32,5 +32,4 @@ public class OrderController {
         return restTemplate.getForObject(PAYMENT_URL+"/payment/get/"+id,CommonResult.class);
     }
 
-
 }
