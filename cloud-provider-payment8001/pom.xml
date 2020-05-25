@@ -14,6 +14,11 @@
 
 
     <dependencies>
+        <dependency><!-- 引入自定义api包，可以使用payment支付Entities-->
+            <groupId>com.atguigu.springcloud</groupId>
+            <artifactId>cloud-api-commons</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
