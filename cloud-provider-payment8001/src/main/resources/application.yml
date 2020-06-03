@@ -1,7 +1,6 @@
 server:
   port: 8001
 
-
 spring:
   application:
     name: cloud-payment-service
@@ -11,6 +10,16 @@ spring:
     url: jdbc:mysql://localhost:3306/springcloud?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
     username: root
     password: lirenxiang
+
+eureka:
+  client:
+    #表示是否将自己注册进eureka 默认为true
+    register-with-eureka: true
+    #是否从eurekaServer抓取已有的注册信息，默认为true，单节点无所谓，集群必须为true才能配合ribon使用负载均很
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.atguigu.springcloud.entities
