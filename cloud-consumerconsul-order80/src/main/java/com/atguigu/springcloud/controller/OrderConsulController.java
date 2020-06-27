@@ -9,21 +9,19 @@ import javax.annotation.Resource;
 
 /**
  * @author lirenxiang
- * @date 2020/6/26 16:33
+ * @date 2020/6/27 17:24
  */
 @RestController
 @Slf4j
-public class OrderZKController {
+public class OrderConsulController {
 
-    public static final String INVOKE_URL = "http://CLOUD-PAYMENTZK-SERVICE";
+    public static final String INVOKE_URL = "http://cloud-providerconsul-payment";
     @Resource
     private RestTemplate restTemplate;
 
-    @GetMapping(value = "/consumer/payment/zk")
+    @GetMapping(value = "/consumer/payment/consul")
     public String paymentInfo(){
-        String result = restTemplate.getForObject(INVOKE_URL+"/payment/zk",String.class);
+        String result = restTemplate.getForObject(INVOKE_URL+"/payment/consul",String.class);
         return result;
     }
-
-
 }
