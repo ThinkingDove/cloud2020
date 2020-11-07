@@ -1,7 +1,4 @@
-package com.atguigu.springcloud.controller;/**
- * @author lirenxiang
- * @date 2020/11/6 21:58
- */
+package com.atguigu.springcloud.controller;
 
 import com.atguigu.springcloud.entities.CommonResult;
 import com.atguigu.springcloud.entities.Payment;
