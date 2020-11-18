@@ -16,12 +16,12 @@ public class PaymentService {
      * @param id
      * @return
      */
-    public String PaymentInfo_OK(Integer id){
+    public String paymentInfo_OK(Integer id){
         return "线程池：   "+Thread.currentThread().getName()+"   paymentInfo_OK,id:   "+id+"\t"+"O(∩_∩)O哈哈~";
     }
 
 
-    public String PaymentInfo_TimeOut(Integer id){
+    public String paymentInfo_TimeOut(Integer id){
         int timeNumber = 3;
         try {
             TimeUnit.SECONDS.sleep(timeNumber);
