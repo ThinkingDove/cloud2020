@@ -36,7 +36,7 @@ public class OrderHystrixController {
 //    })
     @HystrixCommand
     public String paymentInfo_TimeOut(Integer id){
-        int a = 10/0;
+//        int a = 10/0;
         String result = paymentHystrixService.paymentInfo_TimeOut(id);
         return  result;
     }
