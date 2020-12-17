@@ -21,6 +21,14 @@ spring:
           uri: lb://cloud-payment-service
           predicates:
             - Path=/payment/lb/**
+#            - After=2020-12-17T21:13:23.234+08:00[Asia/Shanghai]
+#            - Before=2020-12-17T21:13:23.234+08:00[Asia/Shanghai]
+#            - Between=2020-12-17T21:13:23.234+08:00[Asia/Shanghai],2020-12-17T21:14:23.234+08:00[Asia/Shanghai]
+#            - Cookie=username,lrx
+#            - Header=X-Request-Id,\d+
+#            - Host=**.atguigu.com,**.baidu.com
+#            - Method=GET
+#            - Query=username,\d+
 
 eureka:
   instance:
