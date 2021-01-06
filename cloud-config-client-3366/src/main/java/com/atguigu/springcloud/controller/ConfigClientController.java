@@ -1,4 +1,4 @@
-package com.atguigu.springcloud.controlller;
+package com.atguigu.springcloud.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author lirenxiang
- * @date 2020/12/22 21:22
+ * @date 2021/1/6 20:21
  */
 @RestController
 @RefreshScope
