@@ -11,7 +11,6 @@ import javax.annotation.Resource;
  * @date 2021/1/16 22:48
  */
 @RestController
-
 public class SendMessageController {
 
     @Resource
