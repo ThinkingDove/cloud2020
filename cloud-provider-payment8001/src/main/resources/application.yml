@@ -4,12 +4,18 @@ server:
 spring:
   application:
     name: cloud-payment-service
+  zipkin:
+    base-url: http://49.235.47.52:9411
+  sleuth:
+    sampler:
+      probability: 1
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://49.235.47.52:3306/springcloud?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
     username: root
     password: lirenxiang
+
 
 eureka:
   client:
@@ -18,7 +24,7 @@ eureka:
     #是否从eurekaServer抓取已有的注册信息，默认为true，单节点无所谓，集群必须为true才能配合ribon使用负载均很
     fetch-registry: true
     service-url:
-#      defaultZone: http://localhost:7001/eureka
+#      defaultZone: http://eureka7001.com:7001/eureka
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka  #集群版
   instance:
     instance-id: payment8001
